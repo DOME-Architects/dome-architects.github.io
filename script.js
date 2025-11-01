@@ -37,3 +37,12 @@ window.addEventListener('scroll', () => {
   slide1.style.transform = `scale(1.05) translateY(${scrollPos * 0.1}px)`;
   slide2.style.transform = `scale(1.05) translateY(${scrollPos * 0.1}px)`;
 });
+
+// Hamburger menu toggle
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
