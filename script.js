@@ -1,4 +1,4 @@
-// Smooth fading hero slider
+// Hero slideshow with fade & Ken Burns zoom
 const slides = [
   'images/hero1.jpg',
   'images/hero2.jpg',
@@ -30,3 +30,10 @@ setInterval(() => {
 
   current = (current + 1) % slides.length;
 }, 5000);
+
+// Optional: Parallax effect
+window.addEventListener('scroll', () => {
+  const scrollPos = window.scrollY;
+  slide1.style.transform = `scale(1.05) translateY(${scrollPos * 0.1}px)`;
+  slide2.style.transform = `scale(1.05) translateY(${scrollPos * 0.1}px)`;
+});
