@@ -1,21 +1,32 @@
-// Placeholder for future animations or effects
-console.log("DOME site loaded.");
-
-// Hero slider with smooth switch
-const hero = document.querySelector('.hero');
-const heroImages = [
+// Smooth fading hero slider
+const slides = [
   'images/hero1.jpg',
   'images/hero2.jpg',
   'images/hero3.jpeg'
 ];
 
-let currentIndex = 0;
+let current = 0;
+let slide1 = document.querySelector('.slide1');
+let slide2 = document.querySelector('.slide2');
+let showingSlide1 = true;
 
-function changeHeroImage() {
-  currentIndex = (currentIndex + 1) % heroImages.length;
-  hero.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
-}
+// Initialize
+slide1.style.backgroundImage = `url('${slides[0]}')`;
+slide1.classList.add('active');
+slide2.style.backgroundImage = `url('${slides[1]}')`;
 
-// Switch every 5 seconds
-setInterval(changeHeroImage, 5000);
+setInterval(() => {
+  showingSlide1 = !showingSlide1;
 
+  if (showingSlide1) {
+    slide1.style.backgroundImage = `url('${slides[current]}')`;
+    slide1.classList.add('active');
+    slide2.classList.remove('active');
+  } else {
+    slide2.style.backgroundImage = `url('${slides[current]}')`;
+    slide2.classList.add('active');
+    slide1.classList.remove('active');
+  }
+
+  current = (current + 1) % slides.length;
+}, 5000);
