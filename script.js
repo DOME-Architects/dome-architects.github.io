@@ -1,3 +1,4 @@
+// HERO SLIDESHOW
 const hero = document.querySelector('.hero');
 
 const images = [
@@ -8,9 +9,6 @@ const images = [
 
 let index = 0;
 
-// DEBUG (you can remove later)
-console.log("Slideshow running");
-
 if (hero) {
   hero.style.backgroundImage = `url(${images[0]})`;
 
@@ -20,6 +18,15 @@ if (hero) {
   }, 5000);
 }
 
+// MOBILE MENU
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+}
 
 
 
