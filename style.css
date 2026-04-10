@@ -120,3 +120,32 @@ footer {
   background: black;
   color: white;
 }
+
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+
+  /* HERO TEXT FIX */
+  .hero-left {
+    left: 1.5rem;
+    bottom: 2rem;
+  }
+
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .hero-left p {
+    font-size: 0.9rem;
+  }
+
+  /* MOVE RIGHT TEXT BELOW */
+  .hero-right {
+    right: auto;
+    left: 1.5rem;
+    bottom: 5rem; /* sits above DOME */
+    font-size: 1.2rem;
+    max-width: 80%;
+  }
+
+}
