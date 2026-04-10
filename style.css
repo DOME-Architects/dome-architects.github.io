@@ -24,7 +24,7 @@ body {
   font-size: 1.8rem;
 }
 
-/* PUSH MENU RIGHT */
+/* MENU RIGHT */
 .nav-links {
   margin-left: auto;
   display: flex;
@@ -41,9 +41,10 @@ body {
 /* HERO */
 .hero {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 70px);
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
   transition: background-image 1.5s ease-in-out;
 }
 
