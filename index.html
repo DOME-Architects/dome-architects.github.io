@@ -5,22 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DOME | Architecture Studio</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- Navigation -->
+<!-- NAVBAR -->
 <nav class="navbar">
-  <div class="container nav-container">
+  <div class="nav-container">
     <a href="#" class="logo-nav">DOME</a>
+
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#blog">Blog</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#blog">Journal</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="mailto:dome.architects2025@gmail.com" class="btn-enquire">Enquire</a></li>
     </ul>
+
     <div class="hamburger">
       <span></span>
       <span></span>
@@ -29,106 +31,98 @@
   </div>
 </nav>
 
-  <!-- Header / Hero -->
- <header class="hero">
+<!-- HERO -->
+<header class="hero">
   <div class="hero-slide slide1"></div>
   <div class="hero-slide slide2"></div>
   <div class="overlay"></div>
-  <div class="hero-bottom">
-    <div class="hero-bottom-left">
-      <h1 class="logo">DOME</h1>
-      <p class="tagline-small">Architecture Studio</p>
-    </div>
-    <div class="hero-bottom-right">
-      <p class="hero-side-text">Solutions made available</p>
-    </div>
+
+  <div class="hero-content">
+    <h1 class="logo">DOME</h1>
+    <p class="tagline">Architecture & Design Studio</p>
+    <a href="#projects" class="cta">View Projects ↓</a>
   </div>
 </header>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <centre>
-      <h2>About</h2>
-      <p>
-        Dome is founded by a family of architects to enrich the lives of other families.
-        The solutions we provide are shaped by a deep appreciation for the spaces we inhabit. We believe the environments we create influence well-being, and we are accountable for what we offer our clients and community.
-      </p>
-      <p><i>Shaping the world with balance and respect is at the core of our philosophy.</i></p>
-      </centre>  
-    </div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="container" style="text-align:center;">
+    <h2>About</h2>
+    <p>
+      Dome is founded by a family of architects to enrich the lives of other families.
+      The solutions we provide are shaped by a deep appreciation for the spaces we inhabit.
+    </p>
+    <p><i>Shaping the world with balance and respect is at the core of our philosophy.</i></p>
   </div>
-    </div>
-  </section>
+</section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project">
-          <img src="images/DOME.png" alt="Project 1">
-          <div class="overlay"><span>Urban Residence</span></div>
-        </div>
-        <div class="project">
-          <img src="images/DOME.png" alt="Project 2">
-          <div class="overlay"><span>Coastal Retreat</span></div>
-        </div>
-        <div class="project">
-          <img src="images/DOME.png" alt="Project 3">
-          <div class="overlay"><span>Courtyard House</span></div>
-        </div>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+      <div class="project">
+        <img src="images/DOME.png">
+        <div class="overlay"><span>Urban Residence</span></div>
+      </div>
+
+      <div class="project">
+        <img src="images/DOME.png">
+        <div class="overlay"><span>Coastal Retreat</span></div>
+      </div>
+
+      <div class="project">
+        <img src="images/DOME.png">
+        <div class="overlay"><span>Courtyard House</span></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-<!-- Blog Section -->
+<!-- BLOG -->
 <section id="blog">
   <div class="container">
     <h2>Journal</h2>
+
     <div class="blog-grid">
       <article class="blog-card">
         <div class="blog-meta">April 2025</div>
         <h3>The Case for Considered Materiality</h3>
-        <p>How the choice of material shapes not just aesthetics, but the lived experience of a home.</p>
-        <a href="#" class="blog-link">Read more →</a>
+        <p>How materials shape experience.</p>
       </article>
+
       <article class="blog-card">
         <div class="blog-meta">February 2025</div>
         <h3>Light as Architecture</h3>
-        <p>Exploring how natural light can be designed into a building as a primary structural and emotional element.</p>
-        <a href="#" class="blog-link">Read more →</a>
+        <p>Designing with natural light.</p>
       </article>
+
       <article class="blog-card">
         <div class="blog-meta">January 2025</div>
         <h3>Designing for Family Life</h3>
-        <p>What it means to create spaces that grow with families — flexible, durable, and full of meaning.</p>
-        <a href="#" class="blog-link">Read more →</a>
+        <p>Spaces that evolve with people.</p>
       </article>
     </div>
   </div>
 </section>
-  
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>
-        For inquiries or collaborations:<br>
-        <a href="mailto:dome.architects2025@gmail.com">dome.architects2025@gmail.com</a>
-      </p>
-      <div class="socials">
-        <a href="#">Instagram</a> |
-        <a href="#">LinkedIn</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 DOME Architecture Studio</p>
-  </footer>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>
+      <a href="mailto:dome.architects2025@gmail.com">dome.architects2025@gmail.com</a>
+    </p>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 DOME Architecture Studio</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
