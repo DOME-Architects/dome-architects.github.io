@@ -46,7 +46,6 @@ setInterval(() => {
 
 
 
-
 // // Hero slideshow with fade & Ken Burns zoom
 // const slides = [
 //   'images/hero1.jpg',
