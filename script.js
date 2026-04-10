@@ -1,36 +1,3 @@
-// const hero = document.querySelector('.hero');
-
-// const images = [
-//   'images/hero1.jpg',
-//   'images/hero2.jpg',
-//   'images/hero3.jpeg'
-// ];
-
-// let index = 0;
-
-// // initial image
-// hero.style.backgroundImage = `url(${images[0]})`;
-
-// setInterval(() => {
-//   index = (index + 1) % images.length;
-//   hero.style.backgroundImage = `url(${images[index]})`;
-// }, 5000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Hero slideshow with fade & Ken Burns zoom
 const slides = [
   'images/hero1.jpg',
   'images/hero2.jpg',
@@ -40,22 +7,21 @@ const slides = [
 let current = 0;
 let slide1 = document.querySelector('.slide1');
 let slide2 = document.querySelector('.slide2');
-let showingSlide1 = true;
+let toggle = true;
 
-// Initialize
-slide1.style.backgroundImage = `url('${slides[0]}')`;
+slide1.style.backgroundImage = `url(${slides[0]})`;
 slide1.classList.add('active');
-slide2.style.backgroundImage = `url('${slides[1]}')`;
+slide2.style.backgroundImage = `url(${slides[1]})`;
 
 setInterval(() => {
-  showingSlide1 = !showingSlide1;
+  toggle = !toggle;
 
-  if (showingSlide1) {
-    slide1.style.backgroundImage = `url('${slides[current]}')`;
+  if (toggle) {
+    slide1.style.backgroundImage = `url(${slides[current]})`;
     slide1.classList.add('active');
     slide2.classList.remove('active');
   } else {
-    slide2.style.backgroundImage = `url('${slides[current]}')`;
+    slide2.style.backgroundImage = `url(${slides[current]})`;
     slide2.classList.add('active');
     slide1.classList.remove('active');
   }
@@ -63,18 +29,63 @@ setInterval(() => {
   current = (current + 1) % slides.length;
 }, 5000);
 
-// Optional: Parallax effect
-window.addEventListener('scroll', () => {
-  const scrollPos = window.scrollY;
-  slide1.style.transform = `scale(1.05) translateY(${scrollPos * 0.1}px)`;
-  slide2.style.transform = `scale(1.05) translateY(${scrollPos * 0.1}px)`;
-});
 
-// Hamburger menu toggle
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+
+
+
+
+
+
+
+
+
+
+// // Hero slideshow with fade & Ken Burns zoom
+// const slides = [
+//   'images/hero1.jpg',
+//   'images/hero2.jpg',
+//   'images/hero3.jpeg'
+// ];
+
+// let current = 0;
+// let slide1 = document.querySelector('.slide1');
+// let slide2 = document.querySelector('.slide2');
+// let showingSlide1 = true;
+
+// // Initialize
+// slide1.style.backgroundImage = `url('${slides[0]}')`;
+// slide1.classList.add('active');
+// slide2.style.backgroundImage = `url('${slides[1]}')`;
+
+// setInterval(() => {
+//   showingSlide1 = !showingSlide1;
+
+//   if (showingSlide1) {
+//     slide1.style.backgroundImage = `url('${slides[current]}')`;
+//     slide1.classList.add('active');
+//     slide2.classList.remove('active');
+//   } else {
+//     slide2.style.backgroundImage = `url('${slides[current]}')`;
+//     slide2.classList.add('active');
+//     slide1.classList.remove('active');
+//   }
+
+//   current = (current + 1) % slides.length;
+// }, 5000);
+
+// // Optional: Parallax effect
+// window.addEventListener('scroll', () => {
+//   const scrollPos = window.scrollY;
+//   slide1.style.transform = `scale(1.05) translateY(${scrollPos * 0.1}px)`;
+//   slide2.style.transform = `scale(1.05) translateY(${scrollPos * 0.1}px)`;
+// });
+
+// // Hamburger menu toggle
+// const hamburger = document.querySelector('.hamburger');
+// const navLinks = document.querySelector('.nav-links');
+
+// hamburger.addEventListener('click', () => {
+//   navLinks.classList.toggle('active');
 });
 
