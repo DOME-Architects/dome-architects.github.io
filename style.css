@@ -16,7 +16,7 @@ body {
 .nav-container {
   display: flex;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
 }
 
 .logo-nav {
@@ -24,7 +24,7 @@ body {
   font-size: 1.8rem;
 }
 
-/* MENU RIGHT */
+/* MENU */
 .nav-links {
   margin-left: auto;
   display: flex;
@@ -34,8 +34,15 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  font-size: 0.9rem;
   color: black;
+  font-size: 0.9rem;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
 /* HERO */
@@ -43,25 +50,22 @@ body {
   position: relative;
   height: calc(100vh - 70px);
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  transition: background-image 1.5s ease-in-out;
+  background-position: center;
+  transition: background-image 1.5s ease;
 }
 
-/* OVERLAY */
 .overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.35);
 }
 
-/* LEFT TEXT */
+/* HERO TEXT */
 .hero-left {
   position: absolute;
   bottom: 2rem;
-  left: 3rem;
+  left: 2rem;
   color: white;
-  z-index: 2;
 }
 
 .hero-left h1 {
@@ -70,24 +74,18 @@ body {
   margin: 0;
 }
 
-.hero-left p {
-  margin: 0;
-}
-
-/* RIGHT TEXT */
 .hero-right {
   position: absolute;
   bottom: 2rem;
-  right: 3rem;
+  right: 2rem;
   color: white;
   font-family: 'Playfair Display';
-  font-size: 1.5rem;
-  z-index: 2;
+  font-size: 1.3rem;
 }
 
 /* SECTIONS */
 section {
-  padding: 5rem 1rem;
+  padding: 4rem 1rem;
 }
 
 .container {
@@ -95,22 +93,20 @@ section {
   margin: auto;
 }
 
-/* PROJECTS */
+.center {
+  text-align: center;
+}
+
+/* GRIDS */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
-.project img {
-  width: 100%;
-}
-
-/* BLOG */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
 }
 
 /* FOOTER */
@@ -121,31 +117,49 @@ footer {
   color: white;
 }
 
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
 
-/* MOBILE FIX */
 @media (max-width: 768px) {
 
-  /* HERO TEXT FIX */
+  /* HIDE MENU */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    width: 220px;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* HERO TEXT STACK */
   .hero-left {
     left: 1.5rem;
     bottom: 2rem;
   }
 
-  .hero-left h1 {
-    font-size: 2rem;
-  }
-
-  .hero-left p {
-    font-size: 0.9rem;
-  }
-
-  /* MOVE RIGHT TEXT BELOW */
   .hero-right {
-    right: auto;
     left: 1.5rem;
-    bottom: 5rem; /* sits above DOME */
-    font-size: 1.2rem;
+    right: auto;
+    bottom: 5rem;
     max-width: 80%;
   }
 
+  /* GRIDS */
+  .project-grid,
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
 }
