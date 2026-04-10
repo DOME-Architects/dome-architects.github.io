@@ -15,81 +15,93 @@ body {
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
+  align-items: center;
+  padding: 1rem 3rem;
 }
 
 .logo-nav {
   font-family: 'Playfair Display';
   font-size: 1.8rem;
-  text-decoration: none;
-  color: black;
 }
 
+/* PUSH MENU RIGHT */
 .nav-links {
+  margin-left: auto;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   list-style: none;
 }
 
 .nav-links a {
   text-decoration: none;
+  font-size: 0.9rem;
   color: black;
-}
-
-.btn-enquire {
-  background: black;
-  color: white;
-  padding: 6px 12px;
 }
 
 /* HERO */
 .hero {
   position: relative;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
+/* SLIDES */
 .hero-slide {
   position: absolute;
   inset: 0;
   background-size: cover;
+  background-position: center;
   opacity: 0;
-  transition: 2s;
+  transition: opacity 2s ease;
 }
 
 .hero-slide.active {
   opacity: 1;
 }
 
+/* OVERLAY */
 .overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.3);
 }
 
-.hero-content {
-  position: relative;
+/* LEFT TEXT */
+.hero-left {
+  position: absolute;
+  bottom: 2rem;
+  left: 3rem;
   color: white;
-  text-align: center;
 }
 
-.logo {
-  font-size: 5rem;
-  letter-spacing: 6px;
+.hero-left h1 {
+  font-family: 'Playfair Display';
+  font-size: 2.5rem;
+  margin: 0;
 }
 
-.tagline {
-  margin: 1rem 0;
+.hero-left p {
+  margin: 0;
+  font-size: 1rem;
 }
 
-.cta {
-  border: 1px solid white;
-  padding: 10px 20px;
+/* RIGHT TEXT */
+.hero-right {
+  position: absolute;
+  bottom: 2rem;
+  right: 3rem;
   color: white;
-  text-decoration: none;
+  font-family: 'Playfair Display';
+  font-size: 1.5rem;
+}
+
+/* SECTIONS */
+section {
+  padding: 5rem 1rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
 }
 
 /* PROJECTS */
@@ -107,6 +119,7 @@ body {
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
 /* FOOTER */
