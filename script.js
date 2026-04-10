@@ -8,18 +8,17 @@ const images = [
 
 let index = 0;
 
-// initial image
-hero.style.backgroundImage = `url(${images[0]})`;
+// DEBUG (you can remove later)
+console.log("Slideshow running");
 
-setInterval(() => {
-  index = (index + 1) % images.length;
-  hero.style.backgroundImage = `url(${images[index]})`;
-}, 5000);
+if (hero) {
+  hero.style.backgroundImage = `url(${images[0]})`;
 
-
-
-
-
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    hero.style.backgroundImage = `url(${images[index]})`;
+  }, 5000);
+}
 
 
 
