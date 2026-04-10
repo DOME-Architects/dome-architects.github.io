@@ -9,15 +9,26 @@ body {
 }
 
 /* Navbar */
+/* OLD
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
-   left: 0;    /* add this */
+   left: 0;   
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   font-family: 'Inter', sans-serif;
+}*/
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .nav-container {
@@ -27,6 +38,7 @@ body {
   max-width: 100%;
   margin: 0 auto;
   padding: 1rem 3rem;
+  box-sizing: border-box;
 }
 
 .logo-nav {
@@ -117,6 +129,35 @@ body {
   overflow: hidden;
 }
 
+.hero-bottom {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 3rem;
+}
+
+.hero-bottom-left .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  letter-spacing: 6px;
+  margin: 0;
+  color: white;
+  line-height: 1;
+}
+
+.tagline-small {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.85);
+  margin: 0.25rem 0 0;
+  letter-spacing: 2px;
+}
+
 /* Hero Slides */
 .hero-slide {
   position: absolute;
@@ -131,6 +172,14 @@ body {
 .hero-slide.active {
   opacity: 1;
   transform: scale(1.05); /* Ken Burns zoom */
+}
+
+.hero-side-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  text-align: right;
 }
 
 /* Overlay */
